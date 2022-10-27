@@ -24,15 +24,19 @@ def main():
         column3 = float(((read_file[line_count]).split())[2]) + column3
 
         line_count = line_count + 1
-
-    line_count = line_count - 1
-
+    
     print("Column             Sum       Average")
     print("------ --------------- -------------")
-    print("%6d %15.2f %13.3f\n" % (1, column1, column1 / line_count), end='')
-    print("%6d %15.2f %13.3f\n" % (2, column2, column2 / line_count), end='')
-    print("%6d %15.2f %13.3f\n" % (3, column3, column3 / line_count), end='')
 
+    column = [column1, column2, column3]
+    line_count = line_count - 1
+    
+    for i in column:
+        print("%6d %15.2f %13.3f\n" % (1, i, i / line_count), end='')
+    
+    # print("%6d %15.2f %13.3f\n" % (1, column1, column1 / line_count), end='')
+    # print("%6d %15.2f %13.3f\n" % (2, column2, column2 / line_count), end='')
+    # print("%6d %15.2f %13.3f\n" % (3, column3, column3 / line_count), end='')
 
     # print(f"""
     # File: {myfile}
