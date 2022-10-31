@@ -15,7 +15,7 @@ def main():
         char_count = len(read_file[line_count]) + char_count
         line_count = line_count + 1
 
-    print(f"Your file {myfile} has {line_count} lines, {word_count} words, and {char_count} characters.")
+    print(f"Your file, {myfile}, has {line_count} lines, {word_count} words, and {char_count} characters.")
     
     # print(f"""{myfile}
     # Lines: {line_count}

@@ -17,7 +17,7 @@ def main():
         # Get line
         # Split line
         # Get column number
-        # print(line_count)
+        # # print(line_count)
 
         column1 = float(((read_file[line_count]).split())[0]) + column1
         column2 = float(((read_file[line_count]).split())[1]) + column2
@@ -30,9 +30,11 @@ def main():
 
     column = [column1, column2, column3]
     line_count = line_count - 1
+    col_number = 1
     
     for i in column:
-        print("%6d %15.2f %13.3f\n" % (1, i, i / line_count), end='')
+        print("%6d %15.2f %13.2f\n" % (col_number, i, i / line_count), end='')
+        col_number += 1
     
     # print("%6d %15.2f %13.3f\n" % (1, column1, column1 / line_count), end='')
     # print("%6d %15.2f %13.3f\n" % (2, column2, column2 / line_count), end='')
